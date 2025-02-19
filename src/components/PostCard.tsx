@@ -61,7 +61,7 @@ const PostCard = ({
         toast.success("Comment posted successfully!");
         setNewComment("");
       } else {
-        toast.error(result?.error);
+        toast.error(result?.error!);
       }
     } catch (error) {
       toast.error("Failed to add comment");

@@ -5,7 +5,7 @@ import { auth } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { getDbUserId } from "./user.action";
 
-const getProfileByUsername = async (username: string) =>{
+const getProfileByUsername = async (username: string):Promise<any> =>{
 try {
     const user = await prisma.user.findUnique({
         where:{
